@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع</title>
+    <link rel="stylesheet" href="styles.css"> <!-- تأكد من وجود ملف CSS -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>صفحة الدفع</h1>
+
+        <!-- ملخص العربة -->
+        <div class="cart-summary">
+            <h2>ملخص الطلب</h2>
+            <div id="cart-items">
+                <!-- سيتم إدراج المنتجات بواسطة JavaScript -->
+            </div>
+            <div class="total">
+                <p>الإجمالي: <span id="total-amount">0.00</span> جنيه</p>
+            </div>
+        </div>
+
+        <!-- استمارة الشحن والدفع -->
+        <div class="checkout-form">
+            <h2>معلومات الشحن والدفع</h2>
+            <form id="checkoutForm">
+                <label for="fullName">الاسم الكامل:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="address">العنوان:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">المدينة:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zipCode">الرمز البريدي:</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+
+                <label for="paymentMethod">طريقة الدفع:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="creditCard">بطاقة ائتمان</option>
+                    <option value="cashOnDelivery">الدفع عند الاستلام</option>
+                </select>
+
+                <button type="submit">إتمام الشراء</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script> <!-- ملف JavaScript لصفحة الدفع -->
+</body>
+</html>
